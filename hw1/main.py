@@ -15,7 +15,17 @@ def count_cars():
     mazda = 0
     infinity = 0
 
-    """write your code here"""
+    for i in (cars):
+        if (type(i)).__name__ is 'Bmw':
+            bmw += 1
+        elif (type(i)).__name__ is 'Lexus':
+            lexus += 1
+        elif (type(i)).__name__ is 'Audi':
+            audi += 1
+        elif (type(i)).__name__ is 'Mazda':
+            mazda += 1
+        elif (type(i)).__name__ is 'Infinity':
+            infinity += 1
 
     return {'bmw': bmw, 'audi': audi, 'lexus': lexus, 'mazda': mazda, 'infinity': infinity}
 
@@ -24,13 +34,14 @@ def count_cars():
 
 
 def is_equals():
-
-    """write your code here"""
+    if (type(car1)).__name__ is (type(car2)).__name__:
+        return True
+    else:
+        return False
 
 
 # TODO: метод create_instance должен вернуть машину модели, которая записана в переменной random_car
 
 
 def create_instance():
-
-    """write your code here"""
+    return random_car
