@@ -53,7 +53,7 @@ def generate_car_set():
 
 
 def get_two_cars(cars):
-    return cars[random.randint(0, len(cars) - 1)], cars[random.randint(0, len(cars) - 1)]
+    return cars[random.randint(0, len(cars)) - 1], cars[random.randint(0, len(cars) - 1)]
 
 
 def get_car():
