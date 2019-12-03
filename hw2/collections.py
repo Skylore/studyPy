@@ -4,7 +4,7 @@
 
 
 def parse_path(json, path):
-    pass
+
 
 
 # TODO метод tuple_of_primes должен создать кортеж состоящий из простых чисел не превышающих n
@@ -12,8 +12,19 @@ def parse_path(json, path):
 
 
 def tuple_of_primes(n):
-    return ()
+    least = []
+    k = 0
+    for i in range(2, n + 1):
+        for j in range(2, i):
+            if i % j == 0:
+                k = k + 1
+        if k == 0:
+            least.append(i)
+        else:
+            k = 0
 
+    r = tuple(least)
+    return r
 
 # TODO метод delete_repetition принимает некоторое количество массивов и должен соеденить массивы в один
 #  где будут содержатся числа без повторений
