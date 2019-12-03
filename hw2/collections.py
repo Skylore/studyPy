@@ -22,9 +22,7 @@ def tuple_of_primes(n):
             least.append(i)
         else:
             k = 0
-
-    r = tuple(least)
-    return r
+    return tuple(least)
 
 # TODO метод delete_repetition принимает некоторое количество массивов и должен соеденить массивы в один
 #  где будут содержатся числа без повторений
