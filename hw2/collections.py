@@ -30,5 +30,7 @@ def tuple_of_primes(n):
 
 def delete_repetition(*args):
     res = []
-
+    for i in args:
+        res.extend(i)
+    res = set(res)
     return res
