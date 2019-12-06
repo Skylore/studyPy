@@ -4,6 +4,13 @@
 
 
 def parse_path(json, path):
+    path = path.split('>')
+    for i in path:
+        if i in '0123456789':
+            json = json[int(i)]
+        else:
+            json = json[i]
+    return json
 
 
 
