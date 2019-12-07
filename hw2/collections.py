@@ -4,7 +4,16 @@
 
 
 def parse_path(json, path):
-    pass
+    # print(path)
+    path = path.split('>')
+    # print(path)
+    for i in path:
+        if i in '0123456789':
+            json = json[int(i)]
+        else:
+            json = json[i]
+    # print(json)
+    return json
 
 
 # TODO метод tuple_of_primes должен создать кортеж состоящий из простых чисел не превышающих n
@@ -12,7 +21,13 @@ def parse_path(json, path):
 
 
 def tuple_of_primes(n):
-    return ()
+    def is_prime(k):
+        for i in range(1, k + 1):
+            if i != 1 and i != k and k % i == 0:
+                return False
+        return True
+    res = [i for i in range(n) if is_prime(i)]
+    return tuple(res)
 
 
 # TODO метод delete_repetition принимает некоторое количество массивов и должен соеденить массивы в один
@@ -21,7 +36,9 @@ def tuple_of_primes(n):
 
 def delete_repetition(*args):
     res = []
-
+    for i in args:
+        res += i
+    res = list(set(res))
     return res
 
 

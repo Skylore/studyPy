@@ -16,8 +16,6 @@ def count_cars():
     mazda = 0
     infinity = 0
 
-    """write your code here"""
-
     return {'bmw': bmw, 'audi': audi, 'lexus': lexus, 'mazda': mazda, 'infinity': infinity}
 
 
