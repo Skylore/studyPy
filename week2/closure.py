@@ -1,19 +1,19 @@
-def one():
-    x = ['1', '2']
+def counter():
+    x = 1
 
-    def stats():
+    def incrementer():
+        nonlocal x
         print(x)
-        print(id(x))
+        x += 1
 
-    stats()
-
-    return stats
+    return incrementer
 
 
-class One:
-    def __init__(self):
-        self.x = ['1', '2']
+c = counter()
 
-    def stats(self):
-        print(self.x)
-        print(id(self.x))
+c()
+c()
+c()
+c()
+c()
+

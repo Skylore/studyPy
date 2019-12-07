@@ -4,7 +4,15 @@
 
 
 def parse_path(json, path):
-    pass
+    path = path.split('>')
+
+    for i in range(len(path)):
+        try:
+            path[i] = int(path[i])
+        except ValueError:
+            pass
+
+    print(path)
 
 
 # TODO метод tuple_of_primes должен создать кортеж состоящий из простых чисел не превышающих n
