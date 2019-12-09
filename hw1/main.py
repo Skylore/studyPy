@@ -44,4 +44,4 @@ def is_equals():
 
 
 def create_instance():
-    return eval('random_car')
+    return random_car
